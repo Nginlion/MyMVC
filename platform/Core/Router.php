@@ -8,7 +8,7 @@
             $controllerNameArray = explode('/', $uri);
             $className = '';
 
-            foreach ($controllerNameArray as &$name)
+            foreach ($controllerNameArray as $name)
             {
                 $className = $className . '_' . ucfirst(strtolower($name));
             }
