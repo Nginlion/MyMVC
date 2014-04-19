@@ -9,10 +9,10 @@
 
             foreach ($controllerNameArray as &$name)
             {
-                $className = $className . ucfirst(strtolower($name)) . '_';
+                $className = '_' . $className . ucfirst(strtolower($name));
             }
 
-            $className = $className . 'Controller';
+            $className =  'Controller' . $className;
             return new $className;
         }
 

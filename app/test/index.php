@@ -7,6 +7,8 @@
 
     try
     {
+        $router = new Core_Router();
+        $router->exec();
     }
     catch (Core_Exception $e)
     {
