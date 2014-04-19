@@ -4,12 +4,13 @@
         private function _getController()
         {
             $uri = $_SERVER['PATH_INFO'];
+            $uri = trim($uri, '/');
             $controllerNameArray = explode('/', $uri);
             $className = '';
 
             foreach ($controllerNameArray as &$name)
             {
-                $className = '_' . $className . ucfirst(strtolower($name));
+                $className = $className . '_' . ucfirst(strtolower($name));
             }
 
             $className =  'Controller' . $className;
