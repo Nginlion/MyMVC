@@ -21,7 +21,7 @@
                 throw new Core_Exception("{$className} not exist");
             }
 
-            $path = str_replace('/', '_', $className) . '.php';
+            $path = str_replace('_', '/', $className) . '.php';
             return $this->includeFile($path);
         }
 
