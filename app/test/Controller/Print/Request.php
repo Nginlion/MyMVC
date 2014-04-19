@@ -8,6 +8,8 @@
             $data = array(
                 'title' => 'GET POST SERVER',
             );
-            Core_View::render($data, $tpl);
+
+            $html = Core_View::render($data, $tpl, true);
+            echo $html;
         }
     }
