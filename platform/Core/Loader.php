@@ -9,12 +9,6 @@
         {
             $this->_platformPath = $platformPath;
             $this->_appPath = $appPath;
-            $this->init();
-        }
-
-        public function init()
-        {
-            spl_autoload_register('$this->loadClass');
         }
 
         public function loadClass($className)

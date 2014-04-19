@@ -4,11 +4,9 @@
 
     require_once PLATFORM_PATH . '/Config/basic.php';
     require_once APP_PATH . '/Config/project.php';
-    require_once PLATFORM_PATH . '/Core/Loader.php';
 
     try
     {
-        $loader = new Core_Loader(PLATFORM_PATH, APP_PATH);
     }
     catch (Core_Exception $e)
     {
