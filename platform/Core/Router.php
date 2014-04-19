@@ -1,4 +1,5 @@
 <?php
+
     class Core_Router
     {
         private function _getController()
