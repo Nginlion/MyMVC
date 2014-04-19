@@ -21,7 +21,7 @@
                 throw new Core_Exception("{$className} not exist");
             }
 
-            $path = join('/', $nodes) . '.php';
+            $path = str_replace('/', '_', $className) . '.php';
             return $this->includeFile($path);
         }
 
@@ -37,6 +37,6 @@
                 return include_once($this->_platformPath . '/' . $path);
             }
 
-            throw new Core_Exception("File {$path} not exist");
+            throw new Core_Exception("File {$path} not exists");
         }
     }
