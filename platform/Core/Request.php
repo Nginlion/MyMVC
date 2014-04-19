@@ -2,7 +2,7 @@
 
     class Core_Request
     {
-        public static function get($name, $defaultValue)
+        public static function get($name, $defaultValue = '')
         {
             if (isset($_GET[$name]))
             {
@@ -14,7 +14,7 @@
             }
         }
 
-        public static function post($name, $defaultValue)
+        public static function post($name, $defaultValue = '')
         {
             if (isset($_POST[$name]))
             {
