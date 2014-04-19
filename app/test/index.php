@@ -2,6 +2,7 @@
     define('APP_PATH', dirname(__FILE__));
     define('PLATFORM_PATH', dirname(dirname(APP_PATH)) . '/platform');
 
+    require_once PLATFORM_PATH . '/Config/basic.php';
     require_once APP_PATH . '/Config/project.php';
     require_once PLATFORM_PATH . '/Core/Loader.php';
 

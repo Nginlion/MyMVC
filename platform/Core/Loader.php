@@ -1,5 +1,4 @@
 <?php
-    require_once './Exception.php';
 
     class Core_Loader
     {
