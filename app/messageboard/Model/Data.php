@@ -36,7 +36,7 @@
                     htmlspecialchars($nickname),
                     htmlspecialchars($message),
                 );
-                $ret = $stmt->execute(data);
+                $ret = $stmt->execute($data);
 
                 if ($ret)
                 {
