@@ -62,7 +62,7 @@
         </div>
     </div>
 </div>
-<script src="res/bootstrap/js/jquery.min.js"></script>
+<script src="res/bootstrap/js/jquery.js"></script>
 <script src="res/bootstrap/js/bootstrap.min.js"></script>
 <script>
     $('#submitBtn').on('click', function() {

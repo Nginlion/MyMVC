@@ -7,13 +7,13 @@
             try
             {
                 $dsn = 'mysql:dbname=messageboard;host=localhost';
-                $db = new PDO($dsn, 'root', '');
+                $db = new PDO($dsn, 'root', '123456');
                 $sql = 'SELECT `nickname`, `message` FROM `messagelist`';
                 $ret = $db->query($sql);
 
                 if ($ret)
                 {
-                    return $ret;
+                    return $ret->fetchAll();
                 }
 
                 return false;
@@ -29,7 +29,7 @@
             try
             {
                 $dsn = 'mysql:dbname=messageboard;host=localhost';
-                $db = new PDO($dsn, 'root', '');
+                $db = new PDO($dsn, 'root', '12345');
                 $sql = 'INSERT INTO `messagelist` (`nickname`, `message`) VALUES (?, ?)';
                 $stmt = $db->prepare($sql);
                 $data = array(
