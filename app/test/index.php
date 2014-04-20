@@ -1,4 +1,5 @@
 <?php
+
     define('APP_PATH', dirname(__FILE__));
     define('PLATFORM_PATH', dirname(dirname(APP_PATH)) . '/platform');
 
