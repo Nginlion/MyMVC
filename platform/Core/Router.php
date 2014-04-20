@@ -6,19 +6,20 @@
         {
             $uri = $_SERVER['PATH_INFO'];
             $uri = trim($uri, '/');
-            $controllerNameArray = explode('/', $uri);
             $className = '';
 
-            if (count($controllerNameArray) >= 1)
+            if ('' == $uri)
             {
+                $className = '_Index';
+            }
+            else
+            {
+                $controllerNameArray = explode('/', $uri);
+
                 foreach ($controllerNameArray as $name)
                 {
                     $className = $className . '_' . ucfirst(strtolower($name));
                 }
-            }
-            else
-            {
-                $className = '_Index';
             }
 
             $className =  'Controller' . $className;
