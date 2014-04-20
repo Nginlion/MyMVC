@@ -29,7 +29,7 @@
             try
             {
                 $dsn = 'mysql:dbname=messageboard;host=localhost';
-                $db = new PDO($dsn, 'root', '12345');
+                $db = new PDO($dsn, 'root', '123456');
                 $sql = 'INSERT INTO `messagelist` (`nickname`, `message`) VALUES (?, ?)';
                 $stmt = $db->prepare($sql);
                 $data = array(
