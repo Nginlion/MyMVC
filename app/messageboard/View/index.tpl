@@ -58,7 +58,7 @@
             <p id="infoText">昵称与留言不能为空</p>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary">确定</button>
+            <button class="btn btn-primary" id="confirmInfoModal">确定</button>
         </div>
     </div>
 </div>
@@ -85,6 +85,9 @@
                 }
             });
         }
+    });
+    $('#confirmInfoModal').on('click', function() {
+        $('#infoModal').modal('hide');
     });
 </script>
 </body>
