@@ -9,9 +9,16 @@
             $controllerNameArray = explode('/', $uri);
             $className = '';
 
-            foreach ($controllerNameArray as $name)
+            if (count($controllerNameArray) >= 1)
             {
-                $className = $className . '_' . ucfirst(strtolower($name));
+                foreach ($controllerNameArray as $name)
+                {
+                    $className = $className . '_' . ucfirst(strtolower($name));
+                }
+            }
+            else
+            {
+                $className = '_Index';
             }
 
             $className =  'Controller' . $className;
