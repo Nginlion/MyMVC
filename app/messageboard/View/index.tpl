@@ -83,6 +83,11 @@
                     $('#infoText').html('留言提交成功，请刷新页面查看');
                     $('#infoModal').modal('show');
                 }
+                else
+                {
+                    $('#infoText').html('留言提交失败，错误信息为:' + ret.msg);
+                    $('#infoModal').modal('show');
+                }
             });
         }
     });
