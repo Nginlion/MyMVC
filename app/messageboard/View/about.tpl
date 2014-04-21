@@ -61,9 +61,9 @@
         <pre>
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !^/(?:crossdomain\.xml|favicon\.ico|.*\.js|.*\.css|.*\.png|.*\.jpg|.*\.gif|.*\.html|.*\.cur|.*\map)$
+RewriteCond %{REQUEST_URI} !^/(?:crossdomain\.xml|favicon\.ico|.*\.js|.*\.css|.*\.png|.*\.jpg|.*\.gif|.*\.html|.*\.cur|.*\.map)$
 RewriteRule /(.*)  /MyMVC/app/messageboard/index.php/$1
-RewriteCond %{REQUEST_URI} ^/(?:crossdomain\.xml|favicon\.ico|.*\.js|.*\.css|.*\.png|.*\.jpg|.*\.gif|.*\.html|.*\.cur|.*\map)$
+RewriteCond %{REQUEST_URI} ^/(?:crossdomain\.xml|favicon\.ico|.*\.js|.*\.css|.*\.png|.*\.jpg|.*\.gif|.*\.html|.*\.cur|.*\.map)$
 RewriteRule /(.*)  /MyMVC/app/messageboard/$1
         </pre>
     </div>
