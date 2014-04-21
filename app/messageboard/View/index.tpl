@@ -24,7 +24,7 @@
         <?php if (count($messages) > 0): ?>
         <table class="table table-bordered">
             <tr>
-                <td class="span3">昵称</td>
+                <td class="span4">昵称</td>
                 <td class="span8">留言</td>
                 <td></td>
             </tr>
