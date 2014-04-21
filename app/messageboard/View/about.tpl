@@ -20,10 +20,10 @@
         </div>
     </div>
     <div class="container main-area">
-        <div class="container">
+        <div class="container thumbnail">
             <p><?php echo $about; ?></p>
         </div>
-        <div class="container">
+        <div class="container thumbnail">
             <p>
                 表结构
             </p>
@@ -50,6 +50,19 @@
                 </tr>
             </table>
         </div>
+    </div>
+    <div class="container thumbnail">
+        <p>
+            改写规则
+        </p>
+        <pre>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/(?:crossdomain\.xml|favicon\.ico|.*\.js|.*\.css|.*\.png|.*\.jpg|.*\.gif|.*\.html|.*\.cur|.*\map)$
+RewriteRule /(.*)  /MyMVC/app/messageboard/index.php/$1
+RewriteCond %{REQUEST_URI} ^/(?:crossdomain\.xml|favicon\.ico|.*\.js|.*\.css|.*\.png|.*\.jpg|.*\.gif|.*\.html|.*\.cur|.*\map)$
+RewriteRule /(.*)  /MyMVC/app/messageboard/$1
+        </pre>
     </div>
 <script src="res/bootstrap/js/jquery.js"></script>
 <script src="res/bootstrap/js/bootstrap.min.js"></script>
