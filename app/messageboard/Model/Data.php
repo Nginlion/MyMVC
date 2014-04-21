@@ -8,7 +8,7 @@
             {
                 $dsn = 'mysql:dbname=messageboard;host=localhost';
                 $db = new PDO($dsn, 'root', '123456');
-                $sql = 'SELECT `nickname`, `message` FROM `messagelist`';
+                $sql = 'SELECT `id`, `nickname`, `message` FROM `messagelist`';
                 $ret = $db->query($sql);
 
                 if ($ret)
@@ -35,6 +35,37 @@
                 $data = array(
                     htmlspecialchars($nickname),
                     htmlspecialchars($message),
+                );
+                $ret = $stmt->execute($data);
+
+                if ($ret)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            catch (PDOException $e)
+            {
+                return false;
+            }
+        }
+
+        public function deleteMessage($id)
+        {
+            if (!is_numeric($id))
+            {
+                return false;
+            }
+
+            try
+            {
+                $dsn = 'mysql:dbname=messageboard;host=localhost';
+                $db = new PDO($dsn, 'root', '123456');
+                $sql = 'DELETE FROM `messagelist` WHERE `id`=?';
+                $stmt = $db->prepare($sql);
+                $data = array(
+                    $id,
                 );
                 $ret = $stmt->execute($data);
 

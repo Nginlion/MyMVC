@@ -24,13 +24,15 @@
         <?php if (count($messages) > 0): ?>
         <table class="table table-bordered">
             <tr>
-                <td class="span4">昵称</td>
+                <td class="span3">昵称</td>
                 <td class="span8">留言</td>
+                <td class="span1"></td>
             </tr>
             <?php foreach ($messages as $msg): ?>
             <tr>
                 <td><?php echo $msg['nickname']; ?></td>
                 <td><?php echo $msg['message']; ?></td>
+                <td><button class="close btnDeleteMessage" action-data="<?php echo $msg['id']; ?>">x</button></td>
             </tr>
             <?php endforeach; ?>
         </table>
@@ -93,6 +95,23 @@
     });
     $('#confirmInfoModal').on('click', function() {
         $('#infoModal').modal('hide');
+    });
+    $('.btnDeleteMessage').on('click', function() {
+        var id = $(this).getAttribute('action-data');
+        var send = {
+            'id':id
+        };
+        $.post('Aj/Delete', send, function(ret) {
+            if (0 == ret.code) {
+                $('#infoText').html('留言删除成功，请刷新页面查看');
+                $('#infoModal').modal('show');
+            }
+            else
+            {
+                $('#infoText').html('留言删除失败，错误信息为:' + ret.msg);
+                $('#infoModal').modal('show');
+            }
+        });
     });
 </script>
 </body>
