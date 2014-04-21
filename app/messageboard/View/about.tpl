@@ -49,6 +49,9 @@
                     <td></td>
                 </tr>
             </table>
+            <div class="alert alert-info">
+                数据库名称为messageboard，表名称为messagelist，用户名为root，密码为123456，使用3306端口.
+            </div>
         </div>
     </div>
     <div class="container" style="border-top: 1px solid #e5e5e5;">
