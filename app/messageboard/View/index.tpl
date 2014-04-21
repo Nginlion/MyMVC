@@ -14,7 +14,7 @@
         <div class="container">
             <a class="brand" href="#">留言板</a>
             <ul class="nav">
-                <li class="active"><a href="#">关于</a></li>
+                <li class="active"><a href="/about">关于</a></li>
             </ul>
         </div>
     </div>
