@@ -20,10 +20,10 @@
         </div>
     </div>
     <div class="container main-area">
-        <div class="container thumbnail">
+        <div class="container">
             <p><?php echo $about; ?></p>
         </div>
-        <div class="container thumbnail">
+        <div class="container" style="border-top: 1px solid #e5e5e5;">
             <p>
                 表结构
             </p>
@@ -51,7 +51,7 @@
             </table>
         </div>
     </div>
-    <div class="container thumbnail">
+    <div class="container" style="border-top: 1px solid #e5e5e5;">
         <p>
             改写规则
         </p>
