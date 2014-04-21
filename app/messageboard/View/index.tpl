@@ -26,18 +26,16 @@
             <tr>
                 <td class="span3">昵称</td>
                 <td class="span8">留言</td>
-                <td class="span1"></td>
+                <td></td>
             </tr>
             <?php foreach ($messages as $msg): ?>
             <tr>
                 <td><?php echo $msg['nickname']; ?></td>
                 <td><?php echo $msg['message']; ?></td>
                 <td>
-                    <center>
-                        <button class="close btnDeleteMessage" action-data="<?php echo $msg['id']; ?>">
-                            x
-                        </button>
-                    </center>
+                    <button class="close btnDeleteMessage" action-data="<?php echo $msg['id']; ?>">
+                        x
+                    </button>
                 </td>
             </tr>
             <?php endforeach; ?>
