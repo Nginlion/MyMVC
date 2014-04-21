@@ -20,7 +20,36 @@
         </div>
     </div>
     <div class="container main-area">
-        <p><?php echo $about; ?></p>
+        <div class="container">
+            <p><?php echo $about; ?></p>
+        </div>
+        <div class="container">
+            <p>
+                表结构
+            </p>
+            <table class="table table-bordered">
+                <tr>
+                    <td>名称</td>
+                    <td>类型</td>
+                    <td>备注</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>AI PK</td>
+                </tr>
+                <tr>
+                    <td>nickname</td>
+                    <td>VARCHAR(32)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>message</td>
+                    <td>TEXT</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
     </div>
 <script src="res/bootstrap/js/jquery.js"></script>
 <script src="res/bootstrap/js/bootstrap.min.js"></script>
