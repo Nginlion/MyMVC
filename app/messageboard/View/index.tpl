@@ -32,7 +32,13 @@
             <tr>
                 <td><?php echo $msg['nickname']; ?></td>
                 <td><?php echo $msg['message']; ?></td>
-                <td><button class="close btnDeleteMessage" action-data="<?php echo $msg['id']; ?>">x</button></td>
+                <td>
+                    <center>
+                        <button class="close btnDeleteMessage" action-data="<?php echo $msg['id']; ?>">
+                            x
+                        </button>
+                    </center>
+                </td>
             </tr>
             <?php endforeach; ?>
         </table>
@@ -97,7 +103,7 @@
         $('#infoModal').modal('hide');
     });
     $('.btnDeleteMessage').on('click', function() {
-        var id = $(this).getAttribute('action-data');
+        var id = $(this).attr('action-data');
         var send = {
             'id':id
         };

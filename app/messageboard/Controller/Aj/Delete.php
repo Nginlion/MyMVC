@@ -1,6 +1,6 @@
 <?php
 
-    class Controller_Aj_Add extends Core_Controller
+    class Controller_Aj_Delete extends Core_Controller
     {
         public function run()
         {
