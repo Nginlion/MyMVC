@@ -14,6 +14,12 @@
         public function loadClass($className)
         {
             $nodes = explode('_', $className);
+
+            foreach ($nodes as &$node)
+            {
+                $node = ucfirst(strtolower($node));
+            }
+
             $nodesLength = count($nodes);
 
             if ($nodesLength < 2)
